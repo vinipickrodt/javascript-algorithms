@@ -1,11 +1,11 @@
-exports.qsort = function qsort(arr, esq, dir) {
-	esq = esq == null ? 0 : esq;
-	dir = dir == null ? arr.length - 1 : dir;
+exports.qsort = function qsort(arr, left, right) {
+	left = left == null ? 0 : left;
+	right = right == null ? arr.length - 1 : right;
 
-	var pivot_idx = esq;
+	var pivot_idx = left;
 	var pivot = arr[pivot_idx];
-	var i = esq;
-	var j = dir;
+	var i = left + 1;
+	var j = right;
 
 	while (i < pivot_idx || j > pivot_idx) {
 		while (i < pivot_idx) {
@@ -25,14 +25,14 @@ exports.qsort = function qsort(arr, esq, dir) {
 		}
 	}
 
-	// sort the left side o array partition (esq, dir)
-	if (pivot_idx > esq) {
-		qsort(arr, esq, pivot_idx - 1);
+	// sort the left side o array partition (left, right)
+	if (pivot_idx > left) {
+		qsort(arr, left, pivot_idx - 1);
 	}
 
-	// sort the right side of array partition (esq, dir)
-	if (pivot_idx < dir) {
-		qsort(arr, pivot_idx + 1, dir);
+	// sort the right side of array partition (left, right)
+	if (pivot_idx < right) {
+		qsort(arr, pivot_idx + 1, right);
 	}
 
 	return pivot_idx;

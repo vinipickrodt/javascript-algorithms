@@ -54,7 +54,7 @@ console.log("test2: are equal =", (compareArrays(test1, test2)));
 console.log("");
 console.log("okay, lets compare the sort with big lists and the default javascript array sort.");
 var one_million = 1000 * 1000;
-var list1 = generateList(10 * one_million); // 10 million numbers list is sorted in ~1150ms (Ryzen 7 2700X no OC + 32GB DDR4 2933Mhz Dual Channel)
+var list1 = generateList(10 * one_million); // 10 million numbers list is sorted in ~1090ms (Ryzen 7 2700X no OC + 32GB DDR4 2933Mhz Dual Channel)
 var list2 = list1.slice(0);
 console.log("Array Size = ", list1.length);
 benchmark(() => list2.sort((a, b) => a - b), "native sort");

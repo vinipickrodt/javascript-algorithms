@@ -1,6 +1,6 @@
 # QuickSort implemented using JavaScript in 45 lines.  
   
-simple sort  
+**simple sort**  
 5, 2, 9, 4, 6, 2, 2, 3, 1  
 1, 2, 2, 2, 3, 4, 5, 6, 9  
   

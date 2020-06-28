@@ -17,6 +17,6 @@ Took '1071ms' with custom sort
 test3: are equal = true
 
 **How to use**  
-git clone https://github.com/vinipickrodt/javascript-algorithms.git  
-cd javascript-algorithms  
-node --max-old-space-size=8192 qsort_test.js  
+> git clone https://github.com/vinipickrodt/javascript-algorithms.git  
+> cd javascript-algorithms  
+> node --max-old-space-size=8192 qsort_test.js  
